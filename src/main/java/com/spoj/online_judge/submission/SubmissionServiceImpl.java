@@ -122,6 +122,9 @@ public class SubmissionServiceImpl implements SubmissionService {
             FileWriter inputWriter = new FileWriter(inputFilepath);
             String outputFilepath = "C:\\Users\\ASUS\\Desktop\\online_judge\\online_judge_backend\\src\\main\\java\\com\\spoj\\online_judge\\docker\\code\\output.txt";
             FileWriter outputWriter = new FileWriter(outputFilepath);
+            if(testcases.size()>0){
+                inputWriter.write(testcases.size()+"\n");
+            }
             for(Testcase testcase:testcases){
                 String[] tc = testcase.getInput().split("\n");
                 for(String in:tc){

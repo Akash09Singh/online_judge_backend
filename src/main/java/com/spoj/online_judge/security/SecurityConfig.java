@@ -53,7 +53,7 @@ public class SecurityConfig {
                 .csrf(csrf->csrf.disable())
                 .cors(cors->cors.disable())
                 .authorizeHttpRequests(
-                        auth->auth.requestMatchers("/api/users/generate-token", "/api/users/register").permitAll()
+                        auth->auth.requestMatchers("/api/users/generate-token", "/api/users/register", "/api/users/test", "/api/users").permitAll()
                                   .requestMatchers(HttpMethod.OPTIONS).permitAll()
                                   .anyRequest().authenticated())
                 .exceptionHandling((ex)->ex.authenticationEntryPoint(unauthorizedHandler))

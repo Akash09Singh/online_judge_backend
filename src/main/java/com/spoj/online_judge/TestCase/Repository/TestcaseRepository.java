@@ -9,4 +9,6 @@ import java.util.List;
 @Repository
 public interface TestcaseRepository extends JpaRepository<Testcase, Integer> {
     List<Testcase> findByProblemId(int problemId);
+
+    void deleteByProblemId(int problemId);
 }

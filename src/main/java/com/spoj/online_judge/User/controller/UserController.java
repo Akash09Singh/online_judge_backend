@@ -38,6 +38,11 @@ public class UserController {
         this.userService = userService;
     }
 
+    @GetMapping("/test")
+    public String test(){
+        return "api's working";
+    }
+
     @PostMapping("/register")
     public ResponseEntity<User> registerUser(@RequestBody User newUser) throws Exception {
 
